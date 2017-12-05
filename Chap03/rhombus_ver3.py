@@ -3,7 +3,7 @@ blank=" "
 star="*"
 horizontal_line="-"
 vertical_line="|"
-print("마름모 출력 프로그램 ver1.0")
+print("마름모 출력 프로그램 ver3.0")
 print("")
 
 while True:
