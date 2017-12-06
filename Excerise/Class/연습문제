@@ -1,0 +1,36 @@
+[레스토랑 ver1]
+Restaurant 클래스를 만드시오.
+Restaurant의 __init__(name,type) 메서드는 restaurant_name과 cuisine_type 두 가지 속성을 저장해야 한다. restaurant_name, cuisine_type은 클래스의 멤버 변수로 저장한다.
+이들 정보를 출력하는 describe_restaurant() 메서드와 레스토랑이 열렸다는 메시지를 출력하는 open_restaurant()를 만드세요.
+describe_restaurant() 출력
+"저희 레스토랑 명칭은 [restaurant_name] 이고 [cuisine_type] 전문점입니다."
+open_restaurant() 출력
+"저희 [restaurant_name] 레스토랑 오픈했습니다. 어서오세요."
+
+- 클래스에서 restaurant 인스턴스를 만드시오. 두 속성을 각각 출력(print함수)하고 메서드를 모두 호출하시오.
+
+[레스토랑 ver2]
+ver1에서 클래스의 세 가지 인스턴스를 만들고 describe_restaurant() 함수를 각 객체에서 호출하시오
+
+[레스토랑 ver3]
+ver1에서 기본값이 0인 number_served 속성을 추가하시오. 이 클래스에서 restaurant 객체를 만드시오.
+레스토랑에서 서빙한 고객 숫자를 출력하고, 이 값을 바꿔서 다시 출력하시오
+- 서빙한 고객 숫자를 지정하는 set_number_served(number) 메서드를 추가하시오.
+  새숫자로 이 메서드를 호출하고 값을 다시 출력하시오.
+- 서빙한 고객 숫자를 늘리는 increment_number_served(number) 메서드를 추가하시오.
+  원하는 숫자, 예를 들어 영업일 하루 동안 서빙한 숫자로 이 메서드를 호출 하시오.
+
+[레스토랑 ver4]
+ver3에서 number_served 값을 "고객서빙현황로그.txt"의 마지막 값을 읽어와서 세팅한다.
+초기에 값이 없다면 0으로 세팅한다. 당일 서빙한 고객은 increment_number_served(number)로만 증가 시키고
+ 최종 number_served 값을 저장한다.
+
+
+
+
+
+
+
+
+
+
