@@ -1,2 +1,0 @@
-str="Welcome"
-print(str)
