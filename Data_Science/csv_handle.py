@@ -1,13 +1,22 @@
 import csv
 import statistics
 
-f = open('Demographic_Statistics_By_Zip_Code.csv','r',encoding='utf-8')
-rdr = csv.reader(f)
+with open('Demographic_Statistics_By_Zip_Code.csv',newline='') as infile:
+    data = list(csv.reader(infile))
 
-for line in rdr:
-    print(line)
+countParticipantsIndex = data[0].index("COUNT PARTICIPANTS")
+print("The index of 'COUNT PARTICIPANTS': "+str(countParticipantsIndex))
 
-f.close()
+countParticipants= []
+index = 0
+
+for row in data[1:]:
+    countParticipants.append(int(row[countParticipantsIndex]))
+
+print(statistics.mean(countParticipants))
+print(statistics.stdev(countParticipants))
+
+
 
 
 
