@@ -10,6 +10,6 @@ countParticipants= []
 # index = 0
 
 for row in data[1:]:
-    countParticipants.append(int(row[countParticipantsIndex]))
+    countParticipants.append(row[countParticipantsIndex])
 
-# COUNT CITIZEN STATUS TOTAL
+# COUNT FEMALE
