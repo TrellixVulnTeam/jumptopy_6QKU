@@ -30,5 +30,5 @@ with open('Demographic_Statistics_By_Zip_Code.csv',newline='') as infile:
 # print_row(get_cvs_rowInstance("COUNT FEMALE"))
 print_row(get_cvs_rowInstance("PERCENT FEMALE"),"float")
 # print_row(get_cvs_rowInstance("JURISDICTION NAME"),"str")
-# print_clo(data[0])
+print_clo(data[0])
 # print_clo(data[1])

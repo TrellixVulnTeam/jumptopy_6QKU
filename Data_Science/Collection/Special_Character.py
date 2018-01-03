@@ -1,0 +1,5 @@
+print("제곱(Square):**")
+print("제곱근(Square Root):√")
+print("시그마(Sigma):∑")
+print("분산(Variance) 공식: ∑(표본-평균)**/표본수")
+print("표준편차(Standard Deviation) 공식: √분산")
