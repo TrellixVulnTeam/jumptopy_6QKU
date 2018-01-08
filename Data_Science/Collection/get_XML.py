@@ -1,7 +1,8 @@
 # XML_URL: http://nenechicken.com/subpage/where_list.asp?target_step1=%EC%A0%84%EC%B2%B4&target_step2=%EC%A0%84%EC%B2%B4&proc_type=step1
+# py -m pip install pandas
+print("Start")
 import urllib.request
 from pandas import DataFrame
-
 result = []
 
 import xml.etree.ElementTree as ET
