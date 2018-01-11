@@ -2,7 +2,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from pandas import DataFrame
 
-max_page = 10
+max_page = 100
 result = []
 index="index"
 for page_idx in range(1,max_page+1):
