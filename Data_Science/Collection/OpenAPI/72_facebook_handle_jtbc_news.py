@@ -3,7 +3,10 @@ import urllib.request
 import json
 import datetime
 import csv
-import time
+# import time
+
+app_id = "1494781874156708"
+app_secret = "b89ccfd79ef345a0e7921a2ae0f445c5"
 
 #[CODE 1]
 def get_request_url(url):
@@ -84,13 +87,26 @@ def getPostData(post, access_token, jsonResult):
     post_num_comment = getPostTotalCount(post,'comments')
     post_num_shares = 0if'shares' not in post.keys() else post['shares']['count']
 
-
-
     #[CODE 4-2]
+    # example of 'created_time': '2017-02-02T14:00:00+0000'
     post_created_time = getPostItem(post,'created_time')
-    post_created_time = datetime.datetime.strftime(post_created_time,'%Y-%m-%dT%H:%M:%S+0000')
+    temp_datetime = post_created_time.split('T')
+    year,month,day = temp_datetime[0].split('-')
+    # post_created_time = str(temp[0]) + ' ' + str(temp2[0])
+    post_created_time = datetime.datetime(int(year),int(month),int(day),0,0,0)
+    # try:
+    #     post_mct = datetime.datetime.strftime(post_created_time,'%Y-%m-%d %H:%M:%S')
+    # except Exception as e:
+    #     print(str(e))
+
+
+    # post_mct = datetime.datetime.strptime(post_created_time,'%Y-%m-%d %H:%M:%S')
+    # datetime.strftime(post_created_time,'%Y-%m-%dT%H:%M:%S+0000')
+    # datetime.datetime.strptime(post_created_time,'%Y-%m-%dT%H:%M:%S+0000')
+    # datetime.datetime.strftime(post_my_time,'%Y-%m-%dT%H:%M:%S+0000')
     post_created_time = post_created_time + datetime.timedelta(hours=+9)
     post_created_time = post_created_time.strftime('%Y-%m-%d %H:%M:%S')
+    print("Debug10")
 
     # [CODE 4-3]
     reaction = getFacebookReaction(post_id, access_token) if post_created_time > '2016-02-24 00:00:00' else {}
@@ -103,6 +119,14 @@ def getPostData(post, access_token, jsonResult):
     post_num_hahas = getPostTotalCount(reaction, 'haha')
     post_num_sads = getPostTotalCount(reaction, 'sad')
     post_num_angrys = getPostTotalCount(reaction, 'angry')
+
+    jsonResult.append({'post_id':post_id,'message':post_message,
+                       'name':post_name,'link':post_link,
+                       'created_time':post_created_time,'num_reactions':post_num_reactions,
+                       'num_comments':post_num_comment,'num_shares':post_num_shares,
+                       'num_likes':post_num_likes,'num_loves':post_num_loves,
+                       'num_wows':post_num_wows,'num_hahas':post_num_hahas,
+                       'num_sads':post_num_sads,'num_angrys':post_num_angrys})
 
 # [CODE 5]
 def getFacebookReaction(post_id, access_token):
@@ -127,3 +151,53 @@ def getFacebookReaction(post_id, access_token):
     else:
         return json.loads(retData)
 
+# [CODE 6]
+def main():
+    print("Mani Start")
+    page_name = "jtbcnews"
+    access_token = app_id+"|"+app_secret
+
+    from_date='2017-02-01'
+    to_date='2017-02-03'
+
+    num_statuses = 10
+    go_next = True
+
+    jsonResult = []
+
+    page_id = getFacebookNumericID(page_name, access_token)
+
+    if(page_id == None):
+        print("[%s] %s is Invalid Page Name"%(datetime.datetime.now(),page_name,page_id))
+        exit()
+
+    print("[%s] %s page id is %s"%(datetime.datetime.now(),page_name,page_id))
+
+    # [CODE 6-1]
+    jsonPost = getFacebookPost(page_id, access_token,from_date,to_date,num_statuses)
+
+    if(jsonPost == None):
+        print("No DATA")
+        exit()
+
+    #[CODE 6-2]
+    while(go_next):
+        for post in jsonPost['data']:
+            getPostData(post, access_token, jsonResult)
+
+        if 'paging' in jsonPost.keys():
+            jsonPost = json.loads(get_request_url(jsonPost['paging']['next']))
+        else:
+            go_next = False
+
+    #[CODE 6-3]
+    with open('%s_facebook_%s_%s.json'%(page_name,from_date,to_date),'w',encoding='utf8') as outfile:
+        str_=json.dumps(jsonResult,indent=4,sort_keys=True, ensure_ascii=False)
+        outfile.write(str_)
+
+        print('%s_facebook_%s_%s.json SAVED'%(page_name, from_date, to_date))
+
+    print("Mani End")
+
+if __name__ == '__main__':
+    main()
