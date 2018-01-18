@@ -37,7 +37,10 @@
   - 현재 수강 과목의 강의 코드
 8. 학생 정보는 'ITT_Student.json' 파일로 저장한다.
  - 파일이 없다면 신규 생성하고 있다면 overwrite한다.
- ex)with open('ITT_Student.json','w',encoding='utf8') as outfile:
+ ex)
+import json
+
+with open('ITT_Student.json','w',encoding='utf8') as outfile:
         readable_result=json.dumps(jsonResult,indent=4,sort_keys=True, ensure_ascii=False)
         outfile.write(readable_result)
         print('ITT_Student.json SAVED')
@@ -45,6 +48,8 @@
 9. 프로그램 시작시 소스코드가 있는 경로에 'ITT_Student.json' 파일이 있다면 읽어들인다.
  - 파일이 없다면 파일 경로를 선택할 것인지 신규생성할 것인지 사용자에게 물어 처리한다.
  with open(json_file_name,encoding='UTF8') as json_file: json_object = json.load(json_file)
+ json_string = json.dumps(json_object)
+ json_big_data = json.loads(json_string)
 
 10. 초기 인터페이스는 아래 내용이 포함된다.
      << json기반 주소록 관리 프로그램 >>

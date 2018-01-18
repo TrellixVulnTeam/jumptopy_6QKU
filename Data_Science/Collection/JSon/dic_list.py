@@ -1,22 +1,13 @@
-dic_list = [
-    {
-        'a':'aaa',
-        'c':'ccc',
-        'd':{
-            'd-1':'d-1111',
-            'd-2':'d2-2222'
-        }
-    },
-]
+g_student_id_index=0
 
-# dic_list.append()
+a = [
+        {'a':'a','b':'b'},
+        {'c':'c','d':'d'}
+    ]
 
-a = {'aa':'a'}
-a['bb'] = 'b'
-first_key = 'cc'
-first_key_value = 'ccc!'
-a[first_key] = first_key_value
-a[first_key] = 'kkk!'
-
+for ele in a:
+    if ele.get('a') == 'a':
+        del ele
+        print("delete")
 print(a)
 
