@@ -30,9 +30,9 @@ def get_jtbc_news_page_ID():
     return page_id
 
 page_id = get_jtbc_news_page_ID()
-from_date  = "2018-01-15"
-to_date = "2018-01-16"
-num_statuses ="100"
+from_date  = "2018-01-24"
+to_date = "2018-01-25"
+num_statuses ="1000"
 access_token = app_id + "|" + app_secret
 
 base = "https://graph.facebook.com/v2.8"
