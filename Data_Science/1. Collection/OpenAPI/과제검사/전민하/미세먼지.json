@@ -1,0 +1,80 @@
+[
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "9",
+        "stationName": "수창동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "13",
+        "stationName": "지산동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "12",
+        "stationName": "서호동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "2",
+        "pm25Value": "17",
+        "stationName": "이현동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "2",
+        "pm25Value": "17",
+        "stationName": "평리동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "14",
+        "stationName": "대명동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "7",
+        "stationName": "노원동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "10",
+        "stationName": "신암동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "2",
+        "pm25Value": "13",
+        "stationName": "태전동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "6",
+        "stationName": "만촌동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "10",
+        "stationName": "호림동"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "16",
+        "stationName": "현풍면"
+    },
+    {
+        "datatime": "2018-02-05 14:00",
+        "pm25Grade": "1",
+        "pm25Value": "8",
+        "stationName": "이곡동"
+    }
+]

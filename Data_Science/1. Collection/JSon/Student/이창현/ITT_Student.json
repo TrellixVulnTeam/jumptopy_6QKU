@@ -1,0 +1,74 @@
+[
+    {
+        "lecture_information": {
+            "lecture_course": [
+                {
+                    "lecture_close": "2018-9-05",
+                    "lecture_code": "IB171106",
+                    "lecture_name": "IoT 빅데이터 실무반",
+                    "lecture_open": "2017-11-06",
+                    "lecture_teacher": "이현구"
+                }
+            ],
+            "lecture_pre_record": "0"
+        },
+        "student_adress": "대명동 123",
+        "student_age": "28",
+        "student_id": "ITT001",
+        "student_name": "이창현"
+    },
+    {
+        "lecture_information": {
+            "lecture_course": [
+                {
+                    "lecture_close": "3",
+                    "lecture_code": "3",
+                    "lecture_name": "3",
+                    "lecture_open": "3",
+                    "lecture_teacher": "3"
+                }
+            ],
+            "lecture_pre_record": "3"
+        },
+        "student_adress": "3",
+        "student_age": "3",
+        "student_id": "ITT003",
+        "student_name": "3"
+    },
+    {
+        "lecture_information": {
+            "lecture_course": [
+                {
+                    "lecture_close": "4",
+                    "lecture_code": "4",
+                    "lecture_name": "4",
+                    "lecture_open": "4",
+                    "lecture_teacher": "4"
+                }
+            ],
+            "lecture_pre_record": "4"
+        },
+        "student_adress": "4",
+        "student_age": "4",
+        "student_id": "ITT002",
+        "student_name": "4"
+    },
+    {
+        "lecture_information": {
+            "lecture_course": [
+                {
+                    "lecture_close": "5",
+                    "lecture_code": "5",
+                    "lecture_name": "5",
+                    "lecture_open": "5",
+                    "lecture_teacher": "5"
+                }
+            ],
+            "lecture_pre_record": "5"
+        },
+        "student_adress": "5",
+        "student_age": "5",
+        "student_id": "ITT004",
+        "student_name": "5"
+    }
+]

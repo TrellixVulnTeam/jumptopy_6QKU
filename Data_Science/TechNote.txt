@@ -1,0 +1,18 @@
+KoNLPy 설치
+C:\Users\USER>py -m pip install JPype1
+Collecting JPype1
+  Using cached JPype1-0.6.2.tar.gz
+Installing collected packages: JPype1
+  Running setup.py install for JPype1 ... error
+Exception:
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python36-32\lib\site-package
+s\pip\compat\__init__.py", line 73, in console_to_str
+    return s.decode(sys.__stdout__.encoding)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc7 in position 110: invali
+d continuation byte
+
+During handling of the above exception, another exception occurred:
+
+<해결>
+Change utf-8 to mbcs

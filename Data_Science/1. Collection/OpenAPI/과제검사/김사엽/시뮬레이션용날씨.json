@@ -1,0 +1,20 @@
+[
+    {
+        "base_date": 20180130,
+        "base_time": "0930",
+        "forecast_date": 20180130,
+        "forecast_time": 1000,
+        "name": "대구광역시 동구 신암4동",
+        "weather": "PTY",
+        "weather_value": 1
+    },
+    {
+        "base_date": 20180130,
+        "base_time": "0930",
+        "forecast_date": 20180130,
+        "forecast_time": 1000,
+        "name": "대구광역시 동구 신암4동",
+        "weather": "REH",
+        "weather_value": 80
+    }
+]

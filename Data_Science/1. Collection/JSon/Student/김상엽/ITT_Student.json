@@ -1,0 +1,20 @@
+[
+    {
+        "ITT001": {
+            "address": "조영동 297",
+            "age": "30",
+            "class_info": {
+                "attending_class": {
+                    "IB171106": {
+                        "c_close": "2018-09-05",
+                        "c_name": "IOT 빅데이터 실무반",
+                        "c_open": "2017-11-06",
+                        "c_tutor": "이현구"
+                    }
+                },
+                "p_registration": "0"
+            },
+            "name": "김상엽"
+        }
+    }
+]

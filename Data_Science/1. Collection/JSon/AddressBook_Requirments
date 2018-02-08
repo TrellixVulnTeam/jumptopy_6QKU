@@ -1,0 +1,60 @@
+아래 조건을 만족하는 학생 정보 관리 프로그램을 작성하시오.
+1. 학생 정보는 아래와 같다.
+<학생 정보>
+- 학생ID: (ITT001부터 순차적으로 부여)
+  ex) ITT001, ITT002 ....
+- 이름
+  ex) 홍길동
+- 나이
+  ex) 29
+- 주소
+  ex) 대구광역시 동구 아양로 135
+- 수강 정보
+  > 과거 수강 횟수
+   ex) 1
+  > 현재 수강 과목
+    + 강의코드: 강의코드 알파벳2자리 + 개강 년월일 6자리로 구성
+     ex) IB171106, OP180104 ....
+    + 강의명
+     ex) IoT 빅데이터 실무반
+    + 강사
+     ex) 이현구
+    + 개강일
+     ex) 2017-11-06
+    + 종료일
+     ex) 2018-09-05
+
+2. 학생 정보는 dictionary list 형태로 저장한다.
+3. 학생 정보는 새로 생성 할 수 있다.
+4. 학생 정보는 주소록에 등록된 모든 데이터를 출력할 수 있다.
+5. 학생 정보는 ID, 이름, 나이, 주소, 과거 수강 횟수,
+   현재 강의를 수강하는 학생, 현재 수강 과목의 강의명, 현재 수강 과목의 강사로 검색 할 수 있다.
+  - 일부만 매칭이 된 결과를 보여 줄 수 있고 한 개이상 매칭이된 결과를 보여 줄 수도 있다.
+  - 매칭된 결과가 복수 일 경우 학생 ID만 출력한다.
+6. 학생 정보는 모두 수정이 가능하여야 한다.
+7. 학생 정보는 아래 기준으로 삭제가 가능하다.
+  - 학생 ID
+  - 현재 수강 과목의 강의 코드
+8. 학생 정보는 'ITT_Student.json' 파일로 저장한다.
+ - 파일이 없다면 신규 생성하고 있다면 overwrite한다.
+ ex)
+import json
+
+with open('ITT_Student.json','w',encoding='utf8') as outfile:
+        readable_result=json.dumps(jsonResult,indent=4,sort_keys=True, ensure_ascii=False)
+        outfile.write(readable_result)
+        print('ITT_Student.json SAVED')
+
+9. 프로그램 시작시 소스코드가 있는 경로에 'ITT_Student.json' 파일이 있다면 읽어들인다.
+ - 파일이 없다면 파일 경로를 선택할 것인지 신규생성할 것인지 사용자에게 물어 처리한다.
+ with open(json_file_name,encoding='UTF8') as json_file: json_object = json.load(json_file)
+ json_string = json.dumps(json_object)
+ json_big_data = json.loads(json_string)
+
+10. 초기 인터페이스는 아래 내용이 포함된다.
+     << json기반 주소록 관리 프로그램 >>
+ 1. 학생 정보입력
+ 2. 학생 정보조회
+ 3. 학생 정보수정
+ 4. 학생 정보삭제
+ 5. 프로그램 종료

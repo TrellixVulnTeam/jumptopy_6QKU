@@ -1,0 +1,19 @@
+[
+    {
+        "coGrade": "1",
+        "coValue": "0.3",
+        "dataTime": "2018-02-05 14:00",
+        "khaiGrade": "2",
+        "no2Grade": "1",
+        "no2Value": "0.006",
+        "o3Grade": "2",
+        "o3Value": "0.036",
+        "pm10Grade": "1",
+        "pm10Value": "19",
+        "pm25Grade": "1",
+        "pm25Value": "10",
+        "so2Grade": "1",
+        "so2Value": "0.003",
+        "stationName": "신암동"
+    }
+]
