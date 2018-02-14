@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+# xlwt 모듈 설치
+# py -m pip install xlwt
 import sys
 from xlrd import open_workbook
 from xlwt import Workbook

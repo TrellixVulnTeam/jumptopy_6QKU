@@ -15,7 +15,7 @@ output_worksheet = output_workbook.add_sheet('all_data_all_workbooks')
 data = []
 first_worksheet = True
 for input_file in glob.glob(os.path.join(input_folder, '*.xls*')):
-	print os.path.basename(input_file)
+	print(os.path.basename(input_file))
 	with open_workbook(input_file) as workbook:
 		for worksheet in workbook.sheets():
 			if first_worksheet:

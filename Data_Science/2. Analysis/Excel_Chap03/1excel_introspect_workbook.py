@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+# xlrd 모듈 설치
+# py -m pip install xlrd
 import sys
 from xlrd import open_workbook
 
