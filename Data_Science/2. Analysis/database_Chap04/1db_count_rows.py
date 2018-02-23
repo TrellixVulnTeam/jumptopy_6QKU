@@ -11,6 +11,7 @@ query = """CREATE TABLE sales
 			 date DATE);"""
 con.execute(query)
 con.commit()
+# 그러나 휘발성이다.
 
 # Insert a few rows of data into the table
 data = [('Richard Lucas', 'Notepad', 2.50, '2014-01-02'),

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#py -m pip install matplotlib
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 

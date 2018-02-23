@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#py -m pip install ggplot
 from ggplot import *
 """
 print(mtcars.head())

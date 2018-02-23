@@ -22,7 +22,7 @@ con.commit()
 # Read the CSV file
 # Insert the data into the Suppliers table
 file_reader = csv.reader(open(input_file, 'r'), delimiter=',')
-header = next(file_reader, None)
+header = next(file_reader, None) # header 건너뛰고 data만 접근 하기 위하여
 for row in file_reader:
 	data = []
 	for column_index in range(len(header)):

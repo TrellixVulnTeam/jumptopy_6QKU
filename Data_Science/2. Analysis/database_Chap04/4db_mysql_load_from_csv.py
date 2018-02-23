@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# py -m pip install mysqlclient
 import csv
 import MySQLdb
 import sys
@@ -8,7 +8,8 @@ from datetime import datetime, date
 input_file = sys.argv[1]
 
 # Connect to a MySQL database
-con = MySQLdb.connect(host='localhost', port=3306, db='my_suppliers', user='python_training', passwd='python_training')
+#con = MySQLdb.connect(host='localhost', port=3306, db='my_suppliers', user='python_training', passwd='python_training')
+con = MySQLdb.connect(host='localhost', port=3306, db='my_suppliers', user='iot', passwd='1234')
 c = con.cursor()
 
 # Read the CSV file
@@ -23,9 +24,10 @@ for row in file_reader:
 			.replace(',', '').strip())
 		else:
 			a_date = datetime.date(datetime.strptime(\
-			str(row[column_index]), '%m/%d/%Y'))
-			# %Y: year is 2016; %y: year is 15
-			a_date = a_date.strftime('%Y-%m-%d')
+			str(row[column_index]), '%m/%d/%y'))
+			# str(row[column_index]), '%m/%d/%Y')) # 대문자 Y로 저장하면 에러남남			# %Y: year is 2016; %y: year is 15
+			a_date = a_date.strftime('%y-%m-%d')
+			# a_date = a_date.strftime('%Y-%m-%d')
 			data.append(a_date)
 	print(data)
 	c.execute("""INSERT INTO Suppliers VALUES (%s, %s, %s, %s, %s);""", data)

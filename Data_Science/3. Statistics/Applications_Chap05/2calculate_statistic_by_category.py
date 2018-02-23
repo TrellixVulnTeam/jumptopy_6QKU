@@ -34,16 +34,16 @@ with open(input_file, 'r', newline='') as input_csv_file:
 			packages[current_name] = {}
 		if current_package not in packages[current_name]:
 			packages[current_name][current_package] = 0
-		if current_name != previous_name:
+		if current_name != previous_name: #csv 파일을 보면
 			if first_row:
-				first_row = False
-			else:
+				first_row = False # 첫번째 행이므로 Skip
+			else: #패키지 별 사용 시간을 누적하는 로직
 				diff = date_diff(today, previous_package_date)
 				if previous_package not in packages[previous_name]:
 					packages[previous_name][previous_package] = int(diff)
 				else:
 					packages[previous_name][previous_package] += int(diff)
-		else:
+		else: #패키지 별 사용 시간을 누적하는 로직
 			diff = date_diff(current_package_date, previous_package_date)
 			packages[previous_name][previous_package] += int(diff)
 		previous_name = current_name
