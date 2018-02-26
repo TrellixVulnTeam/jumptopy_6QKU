@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#py -m pip install seaborn
 import seaborn as sns
 import numpy as np
 import pandas as pd
