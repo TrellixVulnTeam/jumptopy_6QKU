@@ -34,16 +34,16 @@ with open(input_file, 'r', newline='') as input_csv_file:
 			packages[current_name] = {}
 		if current_package not in packages[current_name]:
 			packages[current_name][current_package] = 0
-		if current_name != previous_name: #csv 파일을 보면
+		if current_name != previous_name:
 			if first_row:
-				first_row = False # 첫번째 행이므로 Skip
-			else: #패키지 별 사용 시간을 누적하는 로직
+				first_row = False
+			else:
 				diff = date_diff(today, previous_package_date)
 				if previous_package not in packages[previous_name]:
 					packages[previous_name][previous_package] = int(diff)
 				else:
 					packages[previous_name][previous_package] += int(diff)
-		else: #패키지 별 사용 시간을 누적하는 로직
+		else:
 			diff = date_diff(current_package_date, previous_package_date)
 			packages[previous_name][previous_package] += int(diff)
 		previous_name = current_name
@@ -54,11 +54,14 @@ header = ['Customer Name', 'Category', 'Total Time (in Days)']
 with open(output_file, 'w', newline='') as output_csv_file:
 	filewriter = csv.writer(output_csv_file)
 	filewriter.writerow(header)
-for customer_name, customer_name_value in packages.items():
-	for package_category, package_category_value in packages[customer_name].items():
-		row_of_output = []
-		print(customer_name, package_category, package_category_value)
-		row_of_output.append(customer_name)
-		row_of_output.append(package_category)
-		row_of_output.append(package_category_value)
-		filewriter.writerow(row_of_output)
+	# with 이하 indentation을 맞춰야 한다.
+	for customer_name, customer_name_value in packages.items():
+		for package_category, package_category_value in packages[customer_name].items():
+			row_of_output = []
+			print(customer_name, package_category, package_category_value)
+			row_of_output.append(customer_name)
+			row_of_output.append(package_category)
+			# row_of_output.append(package_category_value)
+			row_of_output.append(package_category_value)
+
+			filewriter.writerow(row_of_output)
