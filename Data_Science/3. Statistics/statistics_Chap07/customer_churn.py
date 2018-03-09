@@ -73,7 +73,7 @@ independent_variables = churn[['account_length', 'custserv_calls', 'total_charge
 independent_variables_with_constant = sm.add_constant(independent_variables, prepend=True)
 logit_model = sm.Logit(dependent_variable, independent_variables_with_constant).fit()
 #logit_model = smf.glm(output_variable, input_variables, family=sm.families.Binomial()).fit()
-print(logit_model.summary())
+# print(logit_model.summary())
 print("\nQuantities you can extract from the result:\n%s" % dir(logit_model))
 print("\nCoefficients:\n%s" % logit_model.params)
 print("\nCoefficient Std Errors:\n%s" % logit_model.bse)
