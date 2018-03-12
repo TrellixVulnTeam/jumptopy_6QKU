@@ -24,7 +24,7 @@ g_Air_Purifier = False # 공기청정기
 g_Radiator = False # 보일러
 g_Air_Conditioner = False # 에어컨
 g_Balcony_Windows = False # 창문
-g_AI_Mode = False # AI 모드
+g_AI_Mode = False # 04. AI 모드
 
 def _print(string):
     sys.stdout.write(string)
@@ -130,7 +130,7 @@ def smart_mode():
                 print("=" * 125)
                 break
             elif g_AI_Mode == False:
-                print("AI 모드가 꺼져있어 디바이스를 조정할수없습니다.")
+                print("04. AI 모드가 꺼져있어 디바이스를 조정할수없습니다.")
                 break
         elif menu_num == 4:
             break

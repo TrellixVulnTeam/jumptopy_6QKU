@@ -156,11 +156,11 @@ class academies() :
 # \\Academies\\"+instance.name)
 #                 for x in str(instance.curriculums).split(',') :
 #                     try :
-#                         ffile = open("D:\Python_workspace\jumptopy\Jump_to_python\학생과제\Academies\
+#                         ffile = open("D:\Python_workspace\jumptopy\01. Jump_to_python\학생과제\Academies\
 # \\"+instance.name+"\\"+x+".bin", 'rb')
 #                         ffile.close()
 #                     except FileNotFoundError :
-#                         ffile = open("D:\Python_workspace\jumptopy\Jump_to_python\학생과제\Academies\
+#                         ffile = open("D:\Python_workspace\jumptopy\01. Jump_to_python\학생과제\Academies\
 # \\"+instance.name+"\\"+x+".bin", 'wb')
 #                         ffile.close()
 #

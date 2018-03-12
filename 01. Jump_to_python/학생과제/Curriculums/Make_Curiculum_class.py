@@ -11,7 +11,7 @@ class curriculum_information() :
 class curriculums() :
     def search_curriculum_info(self):
         order = input("검색 옵션을 설정해 주십시오.\n1.과정전체정보출력 2.과정명만출력 3.과정찾기 4.과정지우기 : ")
-        # os.chdir("D:\Python_workspace\jumptopy\Jump_to_python\학생과제\Academies")
+        # os.chdir("D:\Python_workspace\jumptopy\01. Jump_to_python\학생과제\Academies")
         listdir_name = os.listdir("D:\Python_workspace\jumptopy\Jump_to_python\학생과제\\\Academies")
 
         if order == '1' :
